@@ -1,51 +1,48 @@
 /* TYPE SELECTOR */
 body {
-background-color: #1E1E2F;
-color: #F5F5F5;
-font-family: Arial, sans-serif;
-margin: 0;
+    background-color: #1E1E2F;
+    color: #F5F5F5;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 /* ID SELECTOR */
 #main-header {
-background-color: #141421;
-padding: 20px;
-border-bottom: 4px solid #FF4C60;
-text-align: center;
+    background-color: #141421;
+    padding: 20px;
+    border-bottom: 4px solid #FF4C60;
+    text-align: center;
 }
 
 /* CLASS SELECTOR */
 .tagline {
-color: #FF4C60;
-font-style: italic;
+    color: #FF4C60;
+    font-style: italic;
 }
 
-/* NAVIGATION */
-.nav-list {
-list-style: none;
-display: flex;
-justify-content: center;
-gap: 20px;
-padding: 0;
+/* BOX MODEL EXAMPLE 1 */
+.content-box {
+    background-color: #2A2A40;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #FF4C60;
+    border-radius: 8px;
 }
 
-.nav-list a {
-color: #FF4C60;
-text-decoration: none;
+/* BOX MODEL EXAMPLE 2 */
+#highlight-box {
+    background-color: #FF4C60;
+    color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #ffffff;
 }
 
-
-/* IMAGE */
-img {
-width: 300px;
-margin-top: 10px;
-border: 2px solid #FF4C60;
-}
-
-/* FOOTER */
-#footer {
-background-color: #141421;
-padding: 20px;
-border-top: 4px solid #FF4C60;
-text-align: center;
+/* BOX MODEL EXAMPLE 3 */
+footer {
+    background-color: #141421;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 3px solid #FF4C60;
 }
