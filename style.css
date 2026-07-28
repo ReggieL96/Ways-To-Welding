@@ -1,0 +1,58 @@
+/* TYPE SELECTOR */
+body {
+background-color: #1E1E2F;
+color: #F5F5F5;
+font-family: Arial, sans-serif;
+margin: 0;
+}
+
+/* ID SELECTOR */
+#main-header {
+background-color: #141421;
+padding: 20px;
+border-bottom: 4px solid #FF4C60;
+text-align: center;
+}
+
+/* CLASS SELECTOR */
+.tagline {
+color: #FF4C60;
+font-style: italic;
+}
+
+/* NAVIGATION */
+.nav-list {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 0;
+}
+
+.nav-list a {
+color: #FF4C60;
+text-decoration: none;
+}
+
+/* BOX MODEL (used on multiple elements) /
+.content-box {
+margin: 20px; / outside spacing /
+padding: 15px; / inside spacing /
+border: 2px solid #FF4C60; / border */
+background-color: #2A2A40;
+}
+
+/* IMAGE */
+img {
+width: 300px;
+margin-top: 10px;
+border: 2px solid #FF4C60;
+}
+
+/* FOOTER */
+#footer {
+background-color: #141421;
+padding: 20px;
+border-top: 4px solid #FF4C60;
+text-align: center;
+}
