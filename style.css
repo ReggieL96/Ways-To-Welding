@@ -89,3 +89,9 @@ img:hover {
     object-fit: cover;
     display: block; 
 }
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
