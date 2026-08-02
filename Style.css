@@ -169,34 +169,3 @@ body {
         max-width: 1100px;
         margin: 30px auto;
     }
-}
-/* Card Layout */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Individual Cards */
-.small-box {
-    background-color: #1e1e1e;
-    border: 2px solid #ff6600;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    transition: transform 0.3s ease;
-}
-
-.small-box:hover {
-    transform: scale(1.05);
-}
-
-/* Text */
-.small-box h3 {
-    color: #ff6600;
-}
-
-.small-box p {
-    color: #ddd;
-}
