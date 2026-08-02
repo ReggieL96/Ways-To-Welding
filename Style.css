@@ -1,35 +1,57 @@
+/* ===================== */
+/* ROOT COLORS (LOGO BASED) */
+/* ===================== */
+:root {
+    --black-main: #0A0A0A;
+    --dark-bg: #121212;
+    --metal-gray: #C0C0C0;
+    --white: #F5F5F5;
+
+    --neon-red: #FF2E2E;
+    --deep-red: #B30000;
+    --orange-glow: #FF6A00;
+    --spark-yellow: #FFC400;
+}
+
+/* ===================== */
 /* RESET */
-/* RESET */
+/* ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===================== */
 /* BODY */
+/* ===================== */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0D0D0D;
-    color: #EAEAEA;
+    background-color: var(--black-main);
+    color: var(--white);
+    line-height: 1.6;
 }
 
+/* ===================== */
 /* HERO */
+/* ===================== */
 .hero-container {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-container img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: block;
 }
 
 .hero-container::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+    inset: 0;
     background: rgba(0,0,0,0.6);
 }
 
@@ -40,29 +62,92 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    width: 90%;
+}
+
+/* 🔥 FLAME FLICKER */
+@keyframes flameFlicker {
+    0% {
+        text-shadow:
+            0 0 5px var(--neon-red),
+            0 0 10px var(--orange-glow);
+    }
+    50% {
+        text-shadow:
+            0 0 15px var(--neon-red),
+            0 0 25px var(--orange-glow),
+            0 0 35px var(--spark-yellow);
+    }
+    100% {
+        text-shadow:
+            0 0 5px var(--neon-red),
+            0 0 10px var(--orange-glow);
+    }
 }
 
 .hero-text h1 {
     font-family: 'Oswald', sans-serif;
-    color: #FF2E2E;
-    text-shadow: 0 0 10px rgba(255,46,46,0.8);
+    color: var(--white);
+    animation: flameFlicker 1.5s infinite ease-in-out;
+    font-size: 1.8rem;
 }
 
 .hero-text p {
-    color: #EAEAEA;
+    font-size: 0.9rem;
+    animation: flameFlicker 2.5s infinite ease-in-out;
 }
 
+/* ===================== */
+/* LOGO */
+/* ===================== */
+.logo {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 🔥 LOGO HOVER EFFECT */
+.logo:hover {
+    transform: rotate(360deg) scale(1.1);
+    filter:
+        drop-shadow(0 0 10px var(--neon-red))
+        drop-shadow(0 0 20px var(--neon-red))
+        drop-shadow(0 0 30px var(--orange-glow));
+}
+
+/* Optional idle glow */
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 0 5px var(--neon-red));
+    }
+    50% {
+        filter:
+            drop-shadow(0 0 15px var(--neon-red))
+            drop-shadow(0 0 25px var(--orange-glow));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px var(--neon-red));
+    }
+}
+
+.logo {
+    animation: logoGlow 3s infinite ease-in-out;
+}
+
+/* ===================== */
 /* NAV */
+/* ===================== */
 #navbar {
-    background: #1A1A1A;
-    border-bottom: 3px solid #FF2E2E;
+    background: var(--dark-bg);
+    border-bottom: 3px solid var(--neon-red);
 }
 
 #navbar ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
 #navbar li {
@@ -70,42 +155,50 @@ body {
 }
 
 #navbar a {
-    color: #FF2E2E;
+    color: var(--metal-gray);
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 #navbar a:hover {
-    color: #FF6A00;
+    color: var(--orange-glow);
 }
 
+/* ===================== */
 /* CONTENT */
+/* ===================== */
 .content-box {
     margin: 20px;
     padding: 20px;
-    background: #1A1A1A;
-    border: 2px solid #FF2E2E;
+    background: #111;
+    border: 2px solid var(--neon-red);
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255,46,46,0.4);
 }
 
-/* 🔥 IMAGE ROW FIXED */
+/* ===================== */
+/* IMAGE ROW */
+/* ===================== */
 .image-row {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers images */
+    align-items: center;
     gap: 15px;
 }
 
 .image-row img {
     width: 100%;
-    max-width: 300px;  /* ✅ prevents huge images */
+    max-width: 280px;
     height: auto;
-    margin: 0 auto;
     border-radius: 8px;
-    border: 2px solid #FF2E2E;
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 0 10px rgba(255,46,46,0.6);
 }
 
-/* SPLIT */
+/* ===================== */
+/* GRID SPLIT */
+/* ===================== */
 .split-layout {
     display: grid;
     gap: 20px;
@@ -113,21 +206,24 @@ body {
 
 .small-box {
     background: #0D0D0D;
-    border: 2px solid #FF2E2E;
+    border: 2px solid var(--deep-red);
     padding: 15px;
-    margin-bottom: 10px;
     text-align: center;
 }
 
+/* ===================== */
 /* FOOTER */
+/* ===================== */
 #footer {
     text-align: center;
     padding: 15px;
-    background: #1A1A1A;
-    border-top: 3px solid #FF2E2E;
+    background: var(--dark-bg);
+    border-top: 3px solid var(--neon-red);
 }
 
+/* ===================== */
 /* TABLET */
+/* ===================== */
 @media (min-width: 768px) {
 
     #navbar ul {
@@ -136,36 +232,60 @@ body {
         gap: 20px;
     }
 
+    .hero-container img {
+        height: 350px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
     .image-row {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .image-row img {
-        max-width: 250px; /* smaller on tablet */
+        max-width: 220px;
     }
 
     .split-layout {
         grid-template-columns: 2fr 1fr;
     }
-
-    .hero-container img {
-        height: 350px;
-    }
 }
 
+/* ===================== */
 /* DESKTOP */
+/* ===================== */
 @media (min-width: 1200px) {
 
     .hero-container img {
         height: 450px;
     }
 
-    .image-row img {
-        max-width: 300px; /* clean size on desktop */
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
     }
 
     .content-box {
         max-width: 1100px;
         margin: 30px auto;
     }
+
+    .image-row img {
+        max-width: 260px;
+    }
+
+    .split-layout {
+        grid-template-columns: 3fr 1fr;
+    }
+}
