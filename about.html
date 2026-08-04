@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ways Of Welding</title>
+    <title>About | The Ways Of Welding</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,8 +16,12 @@
 
 <body>
 
+<!-- SPARK EFFECT -->
+<div id="spark-container"></div>
+
 <header id="main-header">
 
+    <!-- HERO -->
     <div class="hero-container">
         <img src="assets/Images/welding banner.jpg" alt="Welding Banner">
 
@@ -27,19 +31,21 @@
         </div>
     </div>
 
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="types.html">Welding Types</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-
 </header>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Welding Types</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="safety.html">Safety</a></li>
+    </ul>
+</nav>
 
 <main>
 
-<section class="content-box" id="about-welding">
+<section class="content-box center-text" id="about-welding">
     <h2>What is Welding?</h2>
 
     <p>
@@ -57,13 +63,13 @@
         and applications.
     </p>
 
-    <p>
+    <p class="warning-text">
         Because welding involves intense heat and harmful fumes, proper safety equipment
         like helmets, gloves, and protective clothing is essential.
     </p>
 </section>
 
-<section class="content-box" id="contact">
+<section class="content-box center-text" id="contact">
     <h2>Contact Us</h2>
 
     <p>
@@ -81,6 +87,9 @@
 <footer id="footer">
     <p>&copy; 2026 The Ways Of Welding</p>
 </footer>
+
+<!-- SPARK SCRIPT -->
+<script src="sparks.js"></script>
 
 </body>
 </html>

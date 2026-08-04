@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ways Of Welding</title>
+    <title>Welding Types | The Ways Of Welding</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,71 +17,82 @@
 
 <body>
 
+<!-- SPARK EFFECT -->
+<div id="spark-container"></div>
+
 <header id="main-header">
 
+    <!-- HERO -->
     <div class="hero-container">
-        <img src="assets\Images\welding banner.jpg" alt="Welding Banner">
+        <img src="assets/Images/welding banner.jpg" alt="Welding Banner">
 
         <div class="hero-text">
-            <h1>The Ways Of Welding</h1>
-            <p>Learn the art of welding</p>
+            <h1>Welding Types</h1>
+            <p>Explore different welding methods</p>
         </div>
     </div>
 
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="types.html">Welding Types</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-
 </header>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Welding Types</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="safety.html">Safety</a></li>
+    </ul>
+</nav>
 
 <main>
 
 <section class="content-box">
     <h2>Welding Types</h2>
 
-    <!-- TIG -->
-    <article class="small-box">
-        <h3>TIG Welding</h3>
-        <p>Precise welding using a tungsten electrode and shielding gas.</p>
+    <!-- GRID (important for layout) -->
+    <div class="grid">
 
-        <div class="image-row">
-            <img src="assets\Images\TIG-Welding-02.webp" alt="TIG welding">
-        </div>
-    </article>
+        <!-- TIG -->
+        <article class="card">
+            <h3>TIG Welding</h3>
+            <p>Precise welding using a tungsten electrode and shielding gas.</p>
 
-    <!-- MIG -->
-    <article class="small-box">
-        <h3>MIG Welding</h3>
-        <p>Fast and beginner-friendly welding using a wire feed.</p>
+            <div class="image-row">
+                <img src="assets/Images/TIG-Welding-02.webp" alt="TIG welding">
+            </div>
+        </article>
 
-        <div class="image-row">
-            <img src="assets\Images\mig-welding-process.webp" alt="MIG welding">
-        </div>
-    </article>
+        <!-- MIG -->
+        <article class="card">
+            <h3>MIG Welding</h3>
+            <p>Fast and beginner-friendly welding using a wire feed.</p>
 
-    <!-- Stick -->
-    <article class="small-box">
-        <h3>Stick Welding</h3>
-        <p>Durable and portable welding method using flux-coated rods.</p>
+            <div class="image-row">
+                <img src="assets/Images/mig-welding-process.webp" alt="MIG welding">
+            </div>
+        </article>
 
-        <div class="image-row">
-            <img src="assets/Images/Stick welding.jpg" alt="Stick welding">
-        </div>
-    </article>
+        <!-- Stick -->
+        <article class="card">
+            <h3>Stick Welding</h3>
+            <p>Durable and portable welding method using flux-coated rods.</p>
 
-    <!-- Flux -->
-    <article class="small-box">
-        <h3>Flux-Cored Welding</h3>
-        <p>Wire-fed welding with built-in flux protection.</p>
+            <div class="image-row">
+                <img src="assets/Images/Stick welding.jpg" alt="Stick welding">
+            </div>
+        </article>
 
-        <div class="image-row">
-            <img src="assets\Images\Flux core welding.jpeg" alt="Flux welding">
-        </div>
-    </article>
+        <!-- Flux -->
+        <article class="card">
+            <h3>Flux-Cored Welding</h3>
+            <p>Wire-fed welding with built-in flux protection.</p>
+
+            <div class="image-row">
+                <img src="assets/Images/Flux core welding.jpeg" alt="Flux welding">
+            </div>
+        </article>
+
+    </div>
 
 </section>
 
@@ -91,6 +102,9 @@
     <p>&copy; 2026 The Ways Of Welding</p> 
     <p>Contact: welding@email.com</p>
 </footer>
+
+<!-- SPARK SCRIPT -->
+<script src="sparks.js"></script>
 
 </body>
 </html>

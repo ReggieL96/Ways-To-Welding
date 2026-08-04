@@ -17,35 +17,38 @@
 
 <body>
 
+<!-- SPARK EFFECT -->
+<div id="spark-container"></div>
+
 <header id="main-header">
 
+    <!-- HERO (MATCHES CSS) -->
     <div class="hero-container">
-        <img src="assets\Images\welding banner.jpg" alt="Welding Banner">
+        <img src="assets/Images/welding banner.webp" alt="Welding Banner">
 
         <div class="hero-text">
-            <h1>The Ways Of Welding</h1>
-            <p>Learn the art of welding</p>
+            <h1>Welding Safety</h1>
+            <p>Stay safe while mastering the craft</p>
         </div>
     </div>
 
-
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="types.html">Types of Welding</a></li>
-            <li><a href="safety.html">Safety</a></li>
-        </ul>
-    </nav>
 </header>
+
+<!-- NAVBAR (MATCHES CSS) -->
+<nav id="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="types.html">Types of Welding</a></li>
+        <li><a href="safety.html">Safety</a></li>
+    </ul>
+</nav>
 
 <main>
 
-</section>
-
 <!-- WARNING -->
 <section class="content-box">
-    <p style="color:#FF2E2E; font-weight:bold; text-align:center;">
+    <p class="warning-text">
         ⚠️ Welding without proper safety precautions can cause serious injury or death.
     </p>
 </section>
@@ -54,60 +57,61 @@
 <section class="content-box">
     <h2>Welding Safety Guidelines</h2>
 
-    <p>
-        Welding involves high temperatures, bright arcs, and hazardous materials. 
+    <p class="center-text">
+        Welding involves high temperatures, bright arcs, and hazardous materials.
         Following proper safety procedures reduces risks and ensures a safe working environment.
     </p>
 
-    <div class="card-container">
+    <!-- GRID -->
+    <div class="grid">
 
-        <article class="small-box">
+        <div class="card">
             <h3>Protective Gear</h3>
-            <p>Wear a welding helmet, gloves, flame-resistant clothing, and steel-toe boots.</p>
-            <img src="assets\Images\protective gear.jpg" alt="Protective Gear">
-        </article>
+            <p>Wear a helmet, gloves, flame-resistant clothing, and boots.</p>
+            <img src="assets/Images/protective gear.jpg" alt="Protective Gear">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Eye Protection</h3>
-            <p>Use proper helmet shading to prevent eye damage from UV and infrared rays.</p>
-            <img src="assets\Images\eye protection.jpg" alt="Eye Protection">
-        </article>
+            <p>Use proper shading to prevent UV and infrared damage.</p>
+            <img src="assets/Images/eye protection.jpg" alt="Eye Protection">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Ventilation</h3>
-            <p>Work in ventilated areas to avoid inhaling harmful fumes and gases.</p>
-            <img src="assets\Images\ventilation.jpg" alt="Ventilation">
-        </article>
+            <p>Work in ventilated areas to avoid harmful fumes.</p>
+            <img src="assets/Images/ventilation.jpg" alt="Ventilation">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Fire Prevention</h3>
-            <p>Keep flammable materials away and always have a fire extinguisher nearby.</p>
-            <img src="assets\Images\fire prevention.jpg" alt="Fire Prevention">
-        </article>
+            <p>Keep flammable materials away and have an extinguisher ready.</p>
+            <img src="assets/Images/fire prevention.jpg" alt="Fire Prevention">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Equipment Check</h3>
-            <p>Inspect tools, cables, and machines before welding.</p>
-            <img src="assets\Images\equipment check.jpg" alt="Equipment Check">
-        </article>
+            <p>Inspect tools, cables, and machines before use.</p>
+            <img src="assets/Images/equipment check.jpg" alt="Equipment Check">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Electrical Safety</h3>
-            <p>Avoid contact with live wires and keep equipment dry.</p>
-            <img src="assets\Images\electrical safety.jpg" alt="Electrical Safety">
-        </article>
+            <p>Avoid live wires and keep equipment dry.</p>
+            <img src="assets/Images/electrical safety.jpg" alt="Electrical Safety">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Proper Training</h3>
-            <p>Only weld if trained. Knowledge reduces accidents and improves quality.</p>
-            <img src="assets\Images\proper training.jpg" alt="Proper Training">
-        </article>
+            <p>Only weld if trained to reduce accidents.</p>
+            <img src="assets/Images/proper training.jpg" alt="Proper Training">
+        </div>
 
-        <article class="small-box">
+        <div class="card">
             <h3>Work Area Safety</h3>
-            <p>Keep your workspace clean, organized, and well-lit.</p>
-            <img src="assets\Images\work area safety.jpg" alt="Work Area Safety">
-        </article>
+            <p>Keep your workspace clean and organized.</p>
+            <img src="assets/Images/work area safety.jpg" alt="Work Area Safety">
+        </div>
 
     </div>
 </section>
@@ -117,6 +121,9 @@
 <footer id="footer">
     <p>© 2026 The Ways Of Welding</p>
 </footer>
+
+<!-- SPARK SCRIPT -->
+<script src="sparks.js"></script>
 
 </body>
 </html>
