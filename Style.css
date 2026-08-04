@@ -102,7 +102,7 @@ body {
 }
 
 /* =========================
-   CONTENT BOX
+   CONTENT BOX (BOX MODEL)
 ========================= */
 .content-box {
     padding: var(--space-4);
@@ -122,42 +122,92 @@ body {
 }
 
 /* =========================
-   SAFETY PAGE ADDITIONS
+   TEXT UTILITIES
 ========================= */
-
-/* warning text */
 .warning-text {
     color: var(--neon-red);
     font-weight: bold;
     text-align: center;
 }
 
-/* centered paragraph */
 .center-text {
     text-align: center;
     max-width: 800px;
     margin: auto;
 }
 
-/* cards */
+/* =========================
+   CARDS
+========================= */
 .card {
     background: var(--dark-bg);
     border: 1px solid var(--metal-gray);
     padding: 16px;
     border-radius: 8px;
     transition: 0.3s;
+    text-align: center;
 }
 
-/* card hover effect (nice upgrade) */
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--neon-red);
 }
 
+/* =========================
+   🔥 HOT METAL IMAGE EFFECT
+========================= */
 .card img {
     width: 100%;
-    margin-top: 8px;
+    max-width: 260px;
+    height: auto;
+    margin: var(--space-2) auto;
+    display: block;
     border-radius: 6px;
+
+    /* glow effect */
+    box-shadow:
+        0 0 5px var(--orange-glow),
+        0 0 10px var(--orange-glow),
+        0 0 20px var(--spark-yellow),
+        0 0 30px var(--neon-red);
+
+    transition: all 0.3s ease;
+
+    /* subtle pulsing heat */
+    animation: heatPulse 2s infinite alternate;
+}
+
+/* hover = hotter glow */
+.card img:hover {
+    box-shadow:
+        0 0 10px var(--orange-glow),
+        0 0 20px var(--spark-yellow),
+        0 0 40px var(--neon-red),
+        0 0 60px var(--neon-red);
+
+    transform: scale(1.05);
+}
+
+/* pulsing heat animation */
+@keyframes heatPulse {
+    0% {
+        box-shadow:
+            0 0 5px var(--orange-glow),
+            0 0 10px var(--orange-glow),
+            0 0 20px var(--spark-yellow);
+    }
+    50% {
+        box-shadow:
+            0 0 15px var(--orange-glow),
+            0 0 25px var(--spark-yellow),
+            0 0 40px var(--neon-red);
+    }
+    100% {
+        box-shadow:
+            0 0 5px var(--orange-glow),
+            0 0 10px var(--orange-glow),
+            0 0 20px var(--spark-yellow);
+    }
 }
 
 /* =========================
