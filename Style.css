@@ -1,5 +1,5 @@
 /* ===================== */
-/* ROOT COLORS (LOGO BASED) */
+/* ROOT COLORS */
 /* ===================== */
 :root {
     --black-main: #0A0A0A;
@@ -11,6 +11,12 @@
     --deep-red: #B30000;
     --orange-glow: #FF6A00;
     --spark-yellow: #FFC400;
+
+    /* Spacing system (8px scale) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
 }
 
 /* ===================== */
@@ -30,6 +36,21 @@ body {
     background-color: var(--black-main);
     color: var(--white);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: var(--orange-glow);
+    margin-bottom: var(--space-2);
+}
+
+h3 {
+    color: var(--spark-yellow);
+    margin-bottom: var(--space-1);
 }
 
 /* ===================== */
@@ -38,14 +59,14 @@ body {
 .hero-container {
     position: relative;
     width: 100%;
+    height: 250px;
     overflow: hidden;
 }
 
 .hero-container img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .hero-container::after {
@@ -65,74 +86,21 @@ body {
     width: 90%;
 }
 
-/* 🔥 FLAME FLICKER */
+/* Flame Animation */
 @keyframes flameFlicker {
-    0% {
-        text-shadow:
-            0 0 5px var(--neon-red),
-            0 0 10px var(--orange-glow);
-    }
-    50% {
-        text-shadow:
-            0 0 15px var(--neon-red),
-            0 0 25px var(--orange-glow),
-            0 0 35px var(--spark-yellow);
-    }
-    100% {
-        text-shadow:
-            0 0 5px var(--neon-red),
-            0 0 10px var(--orange-glow);
-    }
+    0% { text-shadow: 0 0 5px var(--neon-red); }
+    50% { text-shadow: 0 0 20px var(--orange-glow), 0 0 30px var(--spark-yellow); }
+    100% { text-shadow: 0 0 5px var(--neon-red); }
 }
 
 .hero-text h1 {
-    font-family: 'Oswald', sans-serif;
-    color: var(--white);
-    animation: flameFlicker 1.5s infinite ease-in-out;
     font-size: 1.8rem;
+    animation: flameFlicker 1.5s infinite ease-in-out;
 }
 
 .hero-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     animation: flameFlicker 2.5s infinite ease-in-out;
-}
-
-/* ===================== */
-/* LOGO */
-/* ===================== */
-.logo {
-    width: 150px;
-    display: block;
-    margin: 20px auto;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-/* 🔥 LOGO HOVER EFFECT */
-.logo:hover {
-    transform: rotate(360deg) scale(1.1);
-    filter:
-        drop-shadow(0 0 10px var(--neon-red))
-        drop-shadow(0 0 20px var(--neon-red))
-        drop-shadow(0 0 30px var(--orange-glow));
-}
-
-/* Optional idle glow */
-@keyframes logoGlow {
-    0% {
-        filter: drop-shadow(0 0 5px var(--neon-red));
-    }
-    50% {
-        filter:
-            drop-shadow(0 0 15px var(--neon-red))
-            drop-shadow(0 0 25px var(--orange-glow));
-    }
-    100% {
-        filter: drop-shadow(0 0 5px var(--neon-red));
-    }
-}
-
-.logo {
-    animation: logoGlow 3s infinite ease-in-out;
 }
 
 /* ===================== */
@@ -148,67 +116,98 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#navbar li {
-    padding: 10px;
+    gap: var(--space-1);
+    padding: var(--space-2);
 }
 
 #navbar a {
     color: var(--metal-gray);
     text-decoration: none;
     font-weight: bold;
+    padding: var(--space-1) var(--space-2);
+    border-radius: 6px;
     transition: 0.3s;
 }
 
 #navbar a:hover {
-    color: var(--orange-glow);
+    background: var(--deep-red);
+    color: var(--white);
 }
 
 /* ===================== */
-/* CONTENT */
+/* MAIN */
+/* ===================== */
+main {
+    width: 95%;
+    max-width: 1100px;
+    margin: var(--space-3) auto;
+}
+
+/* ===================== */
+/* CONTENT BOX */
 /* ===================== */
 .content-box {
-    margin: 20px;
-    padding: 20px;
+    margin-bottom: var(--space-3);
+    padding: var(--space-2);
     background: #111;
     border: 2px solid var(--neon-red);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255,46,46,0.4);
+    box-shadow: 0 0 10px rgba(255,46,46,0.3);
+    transition: transform 0.3s;
+}
+
+.content-box:hover {
+    transform: translateY(-3px);
 }
 
 /* ===================== */
-/* IMAGE ROW */
+/* IMAGE ROW (FLEXBOX) */
 /* ===================== */
 .image-row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: var(--space-2);
 }
 
 .image-row img {
     width: 100%;
     max-width: 280px;
-    height: auto;
     border-radius: 8px;
     border: 2px solid var(--neon-red);
-    box-shadow: 0 0 10px rgba(255,46,46,0.6);
 }
 
 /* ===================== */
-/* GRID SPLIT */
+/* GRID (WELDING CARDS) */
 /* ===================== */
-.split-layout {
+.welding-grid {
     display: grid;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
 }
 
-.small-box {
+.welding-card {
     background: #0D0D0D;
     border: 2px solid var(--deep-red);
-    padding: 15px;
-    text-align: center;
+    padding: var(--space-2);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.welding-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--neon-red);
+}
+
+/* ===================== */
+/* LIST */
+/* ===================== */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: var(--space-1);
 }
 
 /* ===================== */
@@ -216,32 +215,22 @@ body {
 /* ===================== */
 #footer {
     text-align: center;
-    padding: 15px;
+    padding: var(--space-2);
     background: var(--dark-bg);
     border-top: 3px solid var(--neon-red);
 }
 
 /* ===================== */
-/* TABLET */
+/* TABLET (768px) */
 /* ===================== */
 @media (min-width: 768px) {
 
-    #navbar ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .hero-container img {
+    .hero-container {
         height: 350px;
     }
 
     .hero-text h1 {
         font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
     }
 
     .image-row {
@@ -254,17 +243,22 @@ body {
         max-width: 220px;
     }
 
-    .split-layout {
-        grid-template-columns: 2fr 1fr;
+    .welding-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #navbar ul {
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
 /* ===================== */
-/* DESKTOP */
+/* DESKTOP (1200px) */
 /* ===================== */
 @media (min-width: 1200px) {
 
-    .hero-container img {
+    .hero-container {
         height: 450px;
     }
 
@@ -276,16 +270,11 @@ body {
         font-size: 1.2rem;
     }
 
-    .content-box {
-        max-width: 1100px;
-        margin: 30px auto;
+    .welding-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .image-row img {
         max-width: 260px;
-    }
-
-    .split-layout {
-        grid-template-columns: 3fr 1fr;
     }
 }
