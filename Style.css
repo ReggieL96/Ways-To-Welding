@@ -1,6 +1,4 @@
-/* =========================
-ROOT (COLOR SYSTEM)
-========================= */
+
 :root {
   --black-main: #0A0A0A;
   --dark-bg: #121212;
@@ -17,18 +15,14 @@ ROOT (COLOR SYSTEM)
   --space-4: 32px;
 }
 
-/* =========================
-RESET
-========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-BODY
-========================= */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--black-main);
@@ -36,9 +30,7 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-NAVBAR
-========================= */
+
 #navbar {
   background: var(--dark-bg);
   padding: var(--space-2);
@@ -66,9 +58,7 @@ NAVBAR
   outline: none;
 }
 
-/* =========================
-HERO
-========================= */
+
 .hero-container {
   position: relative;
   width: 100%;
@@ -104,9 +94,7 @@ HERO
   color: var(--neon-red);
 }
 
-/* =========================
-CONTENT BOX
-========================= */
+
 .content-box {
   padding: var(--space-4);
   margin: var(--space-3);
@@ -115,18 +103,14 @@ CONTENT BOX
   border-radius: 8px;
 }
 
-/* =========================
-GRID
-========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-3);
 }
 
-/* =========================
-TEXT UTILITIES
-========================= */
+
 .warning-text {
   color: var(--neon-red);
   font-weight: bold;
@@ -139,9 +123,7 @@ TEXT UTILITIES
   margin: auto;
 }
 
-/* =========================
-CARDS
-========================= */
+
 .card {
   background: var(--dark-bg);
   border: 1px solid var(--metal-gray);
@@ -156,9 +138,7 @@ CARDS
   border-color: var(--neon-red);
 }
 
-/* =========================
-CARD IMAGES (NO SPARKS)
-========================= */
+
 .card img {
   width: 100%;
   max-width: 260px;
@@ -173,9 +153,7 @@ CARD IMAGES (NO SPARKS)
   transform: scale(1.05);
 }
 
-/* =========================
-FOOTER
-========================= */
+
 #footer {
   text-align: center;
   padding: var(--space-2);
@@ -183,19 +161,15 @@ FOOTER
   margin-top: var(--space-4);
 }
 
-/* =========================
-ACCESSIBILITY (FOCUS)
-========================= */
+
 a:focus {
   outline: 3px solid #FFC400;
   outline-offset: 2px;
 }
 
-/* =========================
-RESPONSIVE
-========================= */
 
-/* Tablet */
+
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
@@ -206,7 +180,7 @@ RESPONSIVE
   }
 }
 
-/* Mobile */
+
 @media (max-width: 480px) {
   #navbar ul {
     flex-direction: column;
